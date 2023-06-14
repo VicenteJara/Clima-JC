@@ -1,0 +1,158 @@
+:root {
+  --section-overlay: rgba(0, 0, 0, 0.7);
+  --background-overlay: rgba(0, 0, 0, 0.2);
+  --search-input-border: 0.8px solid white;
+  --search-input-bg: transparent;
+  --search-input-color: white;
+  --search-input-padding: 0.5rem;
+  --search-input-font-size: 20px;
+  --search-input-font-weight: 200;
+  --search-input-border-radius: 0.4rem;
+  --search-button-padding: 10px 50px;
+  --search-button-border: none;
+  --search-button-border-radius: 00.4rem;
+  --search-button-font-size: 20px;
+  --search-button-font-weight: 500;
+  --search-button-bg: white;
+  --search-button-hover-bg: lightgray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-overlay);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Top  */
+
+.section {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+.section__inputs,
+.section__temperature,
+.section__similar-cities {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-overlay);
+}
+
+.section__inputs > input {
+  border: var(--search-input-border);
+  border-radius: var(--search-input-border-radius);
+  background-color: var(--search-input-bg);
+  color: var(--search-input-color);
+  padding: var(--search-input-padding);
+  font-size: var(--search-input-font-size);
+  font-weight: var(--search-input-font-weight);
+}
+
+.section__inputs > input:focus {
+  outline: none;
+}
+
+.section__inputs > button {
+  padding: var(--search-button-padding);
+  border: var(--search-button-border);
+  border-radius: var(--search-button-border-radius);
+  font-size: var(--search-button-font-size);
+  font-weight: var(--search-button-font-weight);
+  background-color: var(--search-button-bg);
+}
+
+.section__inputs > button:hover {
+  cursor: pointer;
+  background-color: var(--search-button-hover-bg);
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon > h3 {
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+
+.temperature > h1 {
+  font-size: 60px;
+}
+
+.similar-cities {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.similar-cities li {
+  margin-bottom: 5px;
+}
+
+.switch-label {
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.switch-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.switch-icon-celsius {
+  background-color: #6b8e23;
+}
+
+.switch-icon-fahrenheit {
+  background-color: #4682b4;
+}
+
+.react-switch-bg {
+  border-radius: 12px;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+}
